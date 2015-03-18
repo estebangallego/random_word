@@ -1,0 +1,13 @@
+<div class="container">
+	<div class="row">
+		<h2><%= @show_message%></h2>
+		<%= @hello %>
+	</div>
+	<div class="row">
+		<h3 class="box"><%= @randomWord %></h3>
+		<form action="/random/generate" method="post">
+			<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+			<input type="submit" value="Generate" class="btm btn-danger">
+		</form>
+	</div>
+</div>
